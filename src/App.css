@@ -1,0 +1,210 @@
+:root {
+  --colorPrimary: #7f97054b;
+  --colorPrimary-medium: #0b0e00;
+  --colorPrimary-dark: #e4e4e4;
+  --colorSecondary: #9cafb7;
+  --colorTertiary: #5abcb9;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 100px);
+  padding-top: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+header {
+  background-color: var(--colorSecondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+
+}
+
+header .enterprise {
+  width: 25%;
+  max-width: 372px;
+  min-width: 300px;
+
+  @media screen and (max-width: 480px) {
+    min-width: 200px;
+  }
+
+  header .enterprise a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+
+  header .enterprise a .logoContainer {
+    width: 25%;
+    aspect-ratio: 1/1;
+  }
+
+  header .enterprise a .logoContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+header .navContainer {
+  height: 100%;
+  margin-right: 3%;
+  display: flex;
+  align-items: center;
+}
+
+
+header .enterprise {
+  width: 25%;
+  max-width: 372px;
+  min-width: 300px;
+
+  @media screen and (max-width: 480px) {
+    min-width: 200px;
+  }
+
+  header .enterprise a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+
+  header .enterprise a .logoContainer {
+    width: 25%;
+    aspect-ratio: 1/1;
+  }
+
+  header .enterprise a .logoContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+header .navContainer {
+  height: 100%;
+  margin-right: 3%;
+  display: flex;
+  align-items: center;
+}
+.ReactModalPortal {
+  position: relative;
+  z-index: 30;
+}
+
+.addEmployeeMain {
+  background-color: rgb(230, 229, 229);
+}
+
+.addEmployeeMain .formContainer {
+  width: 75%;
+  margin: auto;
+  padding: 1em 1em;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .formAddEmployee__sectionContainer {
+  min-width: 240px;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .formTitle {
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin-bottom: 1em;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .employeeIdInfo {
+  width: 40%;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .employeeEnterpriseInfo {
+  width: 40%;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .employeeAddressInfo {
+  width: 100%;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .formTitle {
+  text-align: center;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.addEmployeeMain .formContainer #formAddEmployee .inputContainer label {
+  font-size: 1.05em;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.addEmployeeMain .formContainer .submitButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.addEmployeeMain .formContainer .submitButtonContainer #submitFormButton {
+  background-color: #9cafb7;
+  padding: 0.2em 0.5em;
+  border: solid 1px black;
+  border-radius: 5px;
+  font-size: 1.15em;
+  cursor: pointer;
+}
+
+.addEmployeeMain .formContainer .submitButtonContainer #submitFormButton:hover {
+  background-color: darken(#9cafb7, 10);
+}
+
+.addEmployeeMain .errorInfo {
+  height: 10px;
+  color: red;
+}
+.indexMain {
+  width: 100%;
+ 
+}
+
+.indexMain .chartsContainer {
+  width: 20%;
+  height: 100%;
+  background-color: red;
+}
+
+.indexMain .dataTableContainer {
+  width: 75%;
+  height: 100%;
+  margin: auto;
+  overflow: auto;
+}
+
+.indexMain .dataTableContainer .searchBoxContainer {
+  margin-top: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
