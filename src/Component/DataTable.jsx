@@ -4,9 +4,9 @@
 import React, { useEffect } from "react";
 import DataTable from "react-data-table-component";
 import { useDispatch, useSelector } from "react-redux";
-
+import "../App.css"
 // Importations des actions et des sélecteurs depuis le store Redux
-import { updateSearch, selectSearch, selectEmployeeData } from '../../Redux/store'; 
+import { updateSearch, selectSearch, selectEmployeeData } from '../Redux/store'; 
 
 // Configuration des colonnes pour le tableau DataTable
 const columns = [

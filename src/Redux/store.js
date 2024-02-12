@@ -4,6 +4,7 @@ import { employees } from "../Data/mockEmployee";
 import { states } from "../Data/mockState";
 import { department } from "../Data/mockDepartment";
 
+// Slice pour la gestion des données des employés
 const employeeDataSlice = createSlice({
   name: "employeeData",
   initialState: employees,
@@ -14,13 +15,14 @@ const employeeDataSlice = createSlice({
   },
 });
 
+// Slice pour la gestion des données de l'application (États, Départements, etc.)
 const appDataSlice = createSlice({
   name: "appData",
   initialState: { states, department },
   reducers: {},
 });
 
-// Intégration de la logique de recherche dans le même fichier
+// Slice pour la gestion de la recherche
 const searchSlice = createSlice({
   name: 'search',
   initialState: '',
@@ -31,6 +33,7 @@ const searchSlice = createSlice({
   },
 });
 
+// Slice pour la gestion des interactions utilisateur (Page actuelle, Titre de la page, etc.)
 const userInteractionSlice = createSlice({
   name: "userInteraction",
   initialState: {
@@ -45,10 +48,12 @@ const userInteractionSlice = createSlice({
   },
 });
 
+// Exporte les actions et sélecteurs
 export const { updateSearch } = searchSlice.actions;
 export const selectSearch = (state) => state.search;
 export const selectEmployeeData = (state) => state.employeeData;
 
+// Configuration du magasin Redux avec les slices définis
 export const store = configureStore({
   reducer: {
     employeeData: employeeDataSlice.reducer,

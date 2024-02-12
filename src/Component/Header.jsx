@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../App.css";
-import Nav from "../Nav/Nav";
-import Logo from "../../Asset/Image/logoHrNet.svg";
+import "../App.css";
+import Nav from "./Nav";
+import Logo from "../Asset/Image/logoHrNet.svg";
 
 export default function Header() {
   return (

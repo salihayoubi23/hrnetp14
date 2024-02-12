@@ -7,8 +7,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "pluginhrnet": "^1.0.2",
+    "bootstrap": "^5.3.2",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
     "react-data-table-component": "^7.6.2",
     "react-datepicker": "^5.0.0",
     "react-dom": "^18.2.0",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "pluginhrnet": "^1.0.7"
   }
 }

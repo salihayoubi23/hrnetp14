@@ -1,9 +1,10 @@
+// App.js
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Index from "./Page/Index/Index";
-import AddEmployee from "./Page/AddEmployee/AddEmployee";
-import NotFound from "./Page/NotFound/NotFound";
-import Header from "./Component/Header/Header";
+import Index from "./Page/Index";
+import AddEmployee from "./Page/AddEmployee";
+import Erreur from "./Component/Erreur"; 
+import Header from "./Component/Header";
 import { useSelector } from "react-redux";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/addemployee" element={<AddEmployee />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Erreur />} />
       </Routes>
     </>
   );
