@@ -1,6 +1,7 @@
-// DataTableComponent.js
-
-// Importations nécessaires depuis React et React-Redux
+/**
+ * Composant DataTableComponent pour afficher un tableau de données avec fonction de recherche.
+ * @module DataTableComponent
+ */
 import React, { useEffect } from "react";
 import DataTable from "react-data-table-component";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,7 +9,14 @@ import "../App.css"
 // Importations des actions et des sélecteurs depuis le store Redux
 import { updateSearch, selectSearch, selectEmployeeData } from '../Redux/store'; 
 
-// Configuration des colonnes pour le tableau DataTable
+/**
+ * Configuration des colonnes pour le tableau DataTable.
+ * @constant
+ * @type {Object[]}
+ * @property {string} name - Nom de la colonne.
+ * @property {function} selector - Fonction pour extraire la valeur de la colonne à partir de la ligne de données.
+ * @property {boolean} sortable - Indique si la colonne est sortable.
+ */
 const columns = [
   {
     name: "First Name",
@@ -57,7 +65,12 @@ const columns = [
   },
 ];
 
-// Définition du composant principal DataTableComponent
+/**
+ * Composant principal DataTableComponent.
+ * @function
+ * @returns {JSX.Element} Élément JSX représentant le composant DataTableComponent.
+ */
+
 export default function DataTableComponent() {
   // Utilisation du hook useDispatch pour obtenir la fonction dispatch
   const dispatch = useDispatch();
@@ -85,10 +98,15 @@ export default function DataTableComponent() {
 
   // Effet déclenché à chaque changement dans les données ou la recherche (pour l'instant, c'est vide)
   useEffect(() => {
-    // Vous pouvez ajouter des actions supplémentaires ici si nécessaire
+    
   }, [data, search]);
 
-  // Fonction pour gérer le changement dans le champ de recherche
+   /**
+   * Fonction pour gérer le changement dans le champ de recherche.
+   * @function
+   * @param {Object} e - Événement de changement de champ de recherche.
+   * @returns {void}
+   */
   function handleSearchChange(e) {
     // Convertir la valeur de recherche en minuscules
     const searchValue = e.target.value.toLowerCase();

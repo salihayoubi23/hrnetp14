@@ -1,4 +1,4 @@
-// Import des modules React et des composants nécessaires
+
 import React, { useEffect, useState } from "react";
 import "../App.css"; // Import du fichier CSS principal
 import { useDispatch, useSelector } from "react-redux"; // Import de Redux pour la gestion de l'état global
@@ -10,7 +10,12 @@ import Dropdown from 'pluginhrnet'; // Composant Dropdown personnalisé provenan
 import TextInput from "../Component/TextInput"; // Composant TextInput pour les champs de texte
 import DateInput from "../Component/DateInput"; // Composant DateInput pour les champs de date
 
-// État initial du formulaire
+/**
+ * L'objet initialState représente l'état initial du formulaire dans le composant AddEmployee.
+ *  Cet état initial est utilisé pour initialiser les valeurs des différents champs du formulaire lorsque 
+ * le composant est monté ou lorsque le formulaire est réinitialisé.
+ * @type {Object}
+ */
 const initialState = {
   firstName: "",
   lastName: "",
@@ -23,7 +28,10 @@ const initialState = {
   stateAdress: "",
 };
 
-// Composant principal pour ajouter un employé
+/**
+ * Composant principal pour ajouter un employé
+ * @returns {JSX.Element} Composant d'ajout d'employé
+ */
 export default function AddEmployee() {
   // Initialisation du dispatch Redux pour la gestion de l'état global
   const dispatch = useDispatch();
@@ -53,13 +61,20 @@ export default function AddEmployee() {
     });
   }, [dispatch]);
 
-  // Fonction pour gérer le changement des champs de formulaire
+  /**
+   * Fonction pour gérer le changement des champs de formulaire
+   * @param {string} field - Nom du champ de formulaire
+   * @param {string | Date} value - Valeur du champ de formulaire
+   */
   const handleInputChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
     setFormErrors({ ...formErrors, [field]: null });
   };
 
-  // Fonction pour gérer la soumission du formulaire
+  /**
+   * Fonction pour gérer la soumission du formulaire
+   * @param {Event} e - Événement de formulaire
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -97,7 +112,14 @@ export default function AddEmployee() {
     console.log("After opening modal");
   };
 
-  // Fonction de validation générique pour les champs du formulaire
+  /**
+   * Fonction de validation générique pour les champs du formulaire
+   * @param {string} field - Nom du champ de formulaire
+   * @param {string} value - Valeur du champ de formulaire
+   * @param {RegExp} regex - Expression régulière de validation
+   * @param {string} errorMessage - Message d'erreur en cas de validation échouée
+   * @returns {boolean} True si la validation réussit, sinon False
+   */
   const validateField = (field, value, regex, errorMessage) => {
     if (!regex.test(value)) {
       setFormErrors({ ...formErrors, [field]: errorMessage });
@@ -106,7 +128,9 @@ export default function AddEmployee() {
     return true;
   };
 
-  // Fonction pour réinitialiser le formulaire
+  /**
+   * Fonction pour réinitialiser le formulaire
+   */
   const emptyForm = () => {
     setOnFormReset(true);
     const form = document.querySelector("form");
@@ -187,7 +211,7 @@ export default function AddEmployee() {
               <div className="formInfosGroup">
                 {/* Champ de date pour la date d'embauche */}
                 <DateInput
-                  label="Hiring Date"
+                  label="StartDate"
                   id="hiringStartDate"
                   selected={formData.hiringStartDate}
                   onChange={(date) => setFormData({ ...formData, hiringStartDate: date })}
@@ -266,4 +290,5 @@ export default function AddEmployee() {
       </main>
     </>
   );
+
 }

@@ -27,7 +27,11 @@
     align-items: center;
     padding-bottom: 10px;
   }
-  
+  .linkcustom{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+  }
   /* Logo Container Styles */
   header .enterprise {
     width: 25%;
@@ -64,7 +68,11 @@
     display: flex;
     align-items: center;
   }
-  
+  div.name{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+  }
   /* ------------------------------
      Main Content Styles
      ------------------------------ */

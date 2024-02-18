@@ -3,12 +3,18 @@ import "../App.css";
 import { useDispatch } from "react-redux";
 import DataTableComponent from "../Component/DataTable";
 
-// Composant Index
+
+/**
+ *
+ *
+ * @return {*} 
+ */
 const Index = () => {
   // Initialise le dispatch Redux
   const dispatch = useDispatch();
 
   // Effet secondaire pour mettre à jour la localisation de la page dans le store Redux
+  
   useEffect(() => {
     try {
       dispatch({
